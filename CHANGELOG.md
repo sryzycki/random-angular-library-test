@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v1.0.1...v2.0.0) (2017-09-13)
+
+
+### Code Refactoring
+
+* **button:** project the text inside the button ([ce8dc86](https://github.com/sryzycki/random-angular-library-test/commit/ce8dc86)), closes [#456](https://github.com/sryzycki/random-angular-library-test/issues/456)
+
+
+### BREAKING CHANGES
+
+* **button:** component input is no longer accepted.
+
+Before:
+```html
+<app-component text="My badass copy"></app-component>
+```
+After:
+```html
+<app-component>My badass copy</app-component>
+```
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/sryzycki/random-angular-library-test/compare/v1.0.0...v1.0.1) (2017-09-13)
 
