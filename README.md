@@ -1,5 +1,6 @@
 # RandomAngularLibraryTest
 [![Travis status](https://travis-ci.org/sryzycki/random-angular-library-test.svg?branch=master)](https://travis-ci.org/sryzycki/random-angular-library-test)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
 
