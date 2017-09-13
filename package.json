@@ -8,6 +8,7 @@
     "build": "ng build",
     "packagr": "ng-packagr -p ng-package.json",
     "test": "ng test",
+    "test:ci": "ng test --single-run",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
