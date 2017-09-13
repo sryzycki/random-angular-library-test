@@ -9,7 +9,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter, Input
       class="pretty-button"
       (click)="clicked.emit('I was so clicked!')"
     >
-      {{ text }}
+      <ng-content></ng-content>
     </button>
   `
 })
