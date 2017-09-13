@@ -5,7 +5,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   selector: 'app-button',
   styleUrls: ['./button.component.scss'],
   template: `
-    <button>
+    <button class="pretty-butto">
       <ng-content></ng-content>
     </button>
   `
