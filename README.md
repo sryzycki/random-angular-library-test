@@ -1,4 +1,5 @@
-# RandomAngularLibraryTest ![Travis build status](https://travis-ci.org/sryzycki/random-angular-library-test.svg?branch=master)
+# RandomAngularLibraryTest
+[![Travis status](https://travis-ci.org/sryzycki/random-angular-library-test.svg?branch=master)](https://travis-ci.org/sryzycki/random-angular-library-test)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
 
