@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -9,11 +9,17 @@ import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter } from
       class="pretty-button"
       (click)="clicked.emit('Ive been so clicked!')"
     >
-      <ng-content></ng-content>
+      {{ text }}
     </button>
   `
 })
 export class ButtonComponent implements OnInit {
+  /**
+   * Text to render inside of the button.
+   */
+  @Input()
+  public text: string;
+
   /**
    * Emits a string when the button is clicked.
    */
