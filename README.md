@@ -1,4 +1,4 @@
-# RandomAngularLibraryTest
+# RandomAngularLibraryTest https://travis-ci.org/sryzycki/random-angular-library-test.svg?branch=master
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
 
