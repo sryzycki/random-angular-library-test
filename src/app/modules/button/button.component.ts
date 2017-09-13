@@ -7,7 +7,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter, Input
   template: `
     <button
       class="pretty-button"
-      (click)="clicked.emit('Ive been so clicked!')"
+      (click)="clicked.emit('I was so clicked!')"
     >
       {{ text }}
     </button>
