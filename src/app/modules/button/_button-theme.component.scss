@@ -1,0 +1,37 @@
+@import '../../../styles/theming/theming';
+@import '../../../styles/typography/typography-utils';
+
+
+@mixin rbx-button-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .rbx-button {
+    background-color: map_get($background, button);
+    color: map_get($foreground, button);
+
+    &:hover:not([disabled]) {
+      background-color: map_get($background, button-hover);
+    }
+
+    &[disabled] {
+      opacity: 0.5;
+    }
+  }
+}
+
+@mixin rbx-button-typography($config) {
+  .rbx-button {
+    &.primary {
+      font-family: rbx-font-family($config, button-2);
+      font-size: rbx-font-size($config, button-2);
+      font-weight: rbx-font-weight($config, button-2);
+    }
+
+    &.secondary {
+      font-family: rbx-font-family($config, button-1);
+      font-size: rbx-font-size($config, button-1);
+      font-weight: rbx-font-weight($config, button-1);
+    }
+  }
+}

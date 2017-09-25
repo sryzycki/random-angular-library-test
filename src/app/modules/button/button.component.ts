@@ -1,32 +1,66 @@
-import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostBinding,
+  Input,
+  OnInit,
+  ViewEncapsulation,
+} from '@angular/core';
+
+/**
+ * Possible button importance levels.
+ */
+export type ButtonImportanceLevel = 'primary' | undefined;
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'app-button',
+  encapsulation: ViewEncapsulation.None,
+  // tslint:disable-next-line:component-selector
+  selector: 'button[rbxButton]',
   styleUrls: ['./button.component.scss'],
   template: `
-    <button
-      class="pretty-button"
-      (click)="clicked.emit('I was so clicked!')"
-    >
-      <ng-content></ng-content>
-    </button>
+    <ng-content></ng-content>
   `
 })
 export class ButtonComponent implements OnInit {
   /**
-   * Text to render inside of the button.
+   * Always apply the base Rubix button css class.
    */
-  @Input()
-  public text: string;
+  @HostBinding('class.rbx-button')
+  private addBaseButtonCssClass = true;
 
   /**
-   * Emits a string when the button is clicked.
+   * Bind to the host "secondary" CSS class.
    */
-  @Output()
-  public clicked: EventEmitter<string> = new EventEmitter<string>();
+  @HostBinding('class.secondary')
+  public styleAsSecondaryButton: boolean;
 
-  constructor() { }
+  /**
+   * Bind to the host "primary" CSS class.
+   */
+  @HostBinding('class.primary')
+  public styleAsPrimaryButton: boolean;
 
-  ngOnInit() { }
+  /**
+   * Button importance level in terms of primary/secondary/etc.
+   */
+  @Input()
+  public rbxImportance: ButtonImportanceLevel;
+
+  ngOnInit() {
+    this.styleElementByImportanceLevel();
+  }
+
+  /**
+   * Set component's properties bound to
+   * the host element CSS classes.
+   */
+  private styleElementByImportanceLevel() {
+    if ('primary' === this.rbxImportance) {
+      this.styleAsPrimaryButton = true;
+    }
+    else {
+      this.styleAsSecondaryButton = true;
+    }
+  }
 }

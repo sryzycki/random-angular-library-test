@@ -1,11 +1,20 @@
-button {
-  padding: 1em 2em;
+.rbx-button {
+  padding-right: 15px;
+  padding-left: 15px;
   border: black solid 1px;
-  border-radius: 10%;
-  background-color: transparent;
-  font-size: 25px;
-}
+  margin: 10px;
 
-.pretty-button {
-  background-color: mediumpurple;
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+
+  &.primary {
+    padding-top: .95em;
+    padding-bottom: .95em;
+  }
+
+  &.secondary {
+    padding-top: .6em;
+    padding-bottom: .6em;
+  }
 }
