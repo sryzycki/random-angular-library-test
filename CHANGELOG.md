@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v2.0.0...v3.0.0) (2017-09-25)
+
+
+### Features
+
+* **button:** introduce a button styled based on importance level ([3db0414](https://github.com/sryzycki/random-angular-library-test/commit/3db0414))
+* **styles:** set up theme and typography Sass functions and mixins ([c868755](https://github.com/sryzycki/random-angular-library-test/commit/c868755))
+
+
+### BREAKING CHANGES
+
+* **button:** the `clicked` component output has been removed after initial period of fucking around.
+
+Before:
+```javascript
+<button
+  clicked=“handleClick()”
+>
+  Button
+</button>
+```
+
+After:
+```javascript
+<button
+  rbxButton
+  rbxImportance=“primary”
+>
+  Button
+</button>
+```
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v1.0.1...v2.0.0) (2017-09-13)
 
