@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.0.1"></a>
+## [4.0.1](https://github.com/sryzycki/random-angular-library-test/compare/v4.0.0...v4.0.1) (2017-09-25)
+
+
+### Bug Fixes
+
+* add “packagr” into “release” npm script ([bf34c30](https://github.com/sryzycki/random-angular-library-test/commit/bf34c30))
+
+
+
 <a name="4.0.0"></a>
 # [4.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v3.0.0...v4.0.0) (2017-09-25)
 
