@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v3.0.0...v4.0.0) (2017-09-25)
+
+
+### Code Refactoring
+
+* **button:** prefix exported button module ([eed8607](https://github.com/sryzycki/random-angular-library-test/commit/eed8607))
+
+
+### BREAKING CHANGES
+
+* **button:** the module name has changed.
+
+Before:
+```javascript
+import { ButtonModule } from ‘random-angular-library-test’;
+```
+
+After:
+```javascript
+import { RbxButtonModule } from ‘random-angular-library-test’;
+```
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v2.0.0...v3.0.0) (2017-09-25)
 
