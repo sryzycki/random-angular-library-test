@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import './styles/theming/all-theme';
+@import './styles/theming/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Rubix. We include this here so that you only
+// have to load a single css file for Rubix in your app.
+// **Be sure that you only ever include this mixin once!**
+@include rbx-core();
+
+// Define the default theme (same as the example above).
+//
+// The "rbx-palette" Sass function takes the extended
+// base color palette it was given and returns it
+// with a few extra properties like:
+// - default
+// - default-lighter
+// - default-darker
+// - default-contrast
+// - default-lighter-contrast
+// - default-darker-contrast
+$primary:          rbx-palette($rbx-indigo);
+$accent:           rbx-palette($rbx-orange, A200, A100, A400);
+$demo-app-theme:   rbx-light-theme($primary, $accent);
+
+// Include the default theme styles.
+@include rubix-theme($demo-app-theme);
+
+
+// TODO(Samuel): Figure out if we need a dark theme (e.g. Rubix button?)
+// Define an alternate dark theme.
+//$dark-primary: rbx-palette($rbx-blue-grey);
+//$dark-accent:  rbx-palette($rbx-amber, A200, A100, A400);
+//$dark-warn:    rbx-palette($rbx-deep-orange);
+//$dark-theme:   rbx-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+// Include the alternative theme styles inside of a block with a CSS class. You can make this
+// CSS class whatever you want. In this example, any component inside of an element with
+// `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
+//.rubix-dark-theme {
+//  @include rubix-theme($dark-theme);
+//}

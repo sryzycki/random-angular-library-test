@@ -1,0 +1,10 @@
+// Import all the theming functionality.
+@import '../core';
+@import '../../app/modules/button/button-theme.component';
+
+
+// Create a theme.
+@mixin rubix-theme($theme) {
+  @include rbx-core-theme($theme);
+  @include rbx-button-theme($theme);
+}

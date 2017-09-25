@@ -1,0 +1,13 @@
+@import './typography';
+@import '../../app/modules/button/button-theme.component';
+
+
+// Includes all of the typographic styles.
+@mixin rubix-typography($config: null) {
+  @if $config == null {
+    $config: rbx-typography-config();
+  }
+
+  @include rbx-base-typography($config);
+  @include rbx-button-typography($config);
+}

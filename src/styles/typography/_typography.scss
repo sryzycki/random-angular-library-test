@@ -1,0 +1,128 @@
+@import 'typography-utils';
+
+// Represents a typography level (e.g. "display-4") from the Rubix design spec.
+@function rbx-typography-level(
+  $font-size,
+  $line-height: $font-size,
+  $font-weight: 400,
+  $font-family: null
+) {
+  @return (
+    font-size: $font-size,
+    line-height: $line-height,
+    font-weight: $font-weight,
+    font-family: $font-family
+  );
+}
+
+// Represents a collection of typography levels.
+// Defaults come from Rubix InVision prototype:
+// https://tengroup.invisionapp.com/d/main#/console/10211079/242935406/preview
+@function rbx-typography-config(
+  $font-family:         'Roboto, "Helvetica Neue", sans-serif',
+  $display-4:           rbx-typography-level(42px, 48px, 300),
+  $display-3:           rbx-typography-level(27px, 32px, 300),
+  $display-2:           rbx-typography-level(24px, 28px, 300),
+  $display-1:           rbx-typography-level(18px, 22px, 500),
+  $headline:            rbx-typography-level(22px, 26px, 300),
+  $subheading:          rbx-typography-level(18px, 22px, 300),
+  $body-3:              rbx-typography-level(14px, 18px, 500),
+  $body-2:              rbx-typography-level(14px, 18px, 300),
+  $body-1:              rbx-typography-level(14px, 18px, 300),
+  $caption-2:           rbx-typography-level(10px, 10px, 500),
+  $caption-1:           rbx-typography-level(12px, 14px, 300),
+  $button-2:            rbx-typography-level(14px, 18px, 300),
+  $button-1:            rbx-typography-level(12px, 14px, 300),
+  // Line-height must be unit-less fraction of the font-size.
+  $input:               rbx-typography-level(16px, 1.125, 400)
+) {
+  // Declare an initial map with all of the levels.
+  $config: (
+    display-4:      $display-4,
+    display-3:      $display-3,
+    display-2:      $display-2,
+    display-1:      $display-1,
+    headline:       $headline,
+    subheading:     $subheading,
+    body-3:         $body-3,
+    body-2:         $body-2,
+    body-1:         $body-1,
+    caption-2:      $caption-2,
+    caption-1:      $caption-1,
+    button-2:       $button-2,
+    button-1:       $button-1,
+    input:          $input,
+  );
+
+  // Loop through the levels and set the `font-family` of the ones that don't have one to the base.
+  // Note that SASS can't modify maps in place, which means that we need to merge and re-assign.
+  @each $key, $level in $config {
+    @if map-get($level, font-family) == null {
+      $new-level: map-merge($level, (font-family: $font-family));
+      $config: map-merge($config, ($key: $new-level));
+    }
+  }
+
+  // Add the base font family to the config.
+  @return map-merge($config, (font-family: $font-family));
+}
+
+// Add the base typography styles, based on a config.
+@mixin rbx-base-typography($config, $selector: '.rbx-typography') {
+  .rbx-display-4 {
+    @include rbx-typography-level-to-styles($config, display-4);
+    margin: 0 0 0.5em;
+  }
+
+  .rbx-display-3 {
+    @include rbx-typography-level-to-styles($config, display-3);
+    margin: 0 0 0.5em;
+  }
+
+  .rbx-display-2 {
+    @include rbx-typography-level-to-styles($config, display-2);
+    margin: 0 0 0.5em;
+  }
+
+  .rbx-display-1 {
+    @include rbx-typography-level-to-styles($config, display-1);
+    margin: 0 0 0.5em;
+  }
+
+  .rbx-headline,
+  #{$selector} h1 {
+    @include rbx-typography-level-to-styles($config, headline);
+    margin: 0 0 16px;
+  }
+
+  .rbx-subheading,
+  #{$selector} h2 {
+    @include rbx-typography-level-to-styles($config, subheading);
+    margin: 0 0 16px;
+  }
+
+  .rbx-body-3 {
+    @include rbx-typography-level-to-styles($config, body-3);
+  }
+
+  .rbx-body-2 {
+    @include rbx-typography-level-to-styles($config, body-2);
+  }
+
+  .rbx-body-1 {
+    @include rbx-typography-level-to-styles($config, body-1);
+  }
+
+  .rbx-caption-2 {
+    @include rbx-typography-level-to-styles($config, caption-2);
+  }
+
+  .rbx-caption-1 {
+    @include rbx-typography-level-to-styles($config, caption-1);
+  }
+
+  // Base paragraph style.
+  p {
+    margin: 0 0 1em;
+  }
+}
