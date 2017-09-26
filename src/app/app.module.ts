@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { ButtonModule } from './modules/button/button.module';
+import { RbxButtonModule } from './modules/button/button.module';
 
 import { AppComponent } from './app.component';
 
@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    ButtonModule,
+    RbxButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
