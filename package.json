@@ -9,8 +9,8 @@
     "test": "ng test",
     "test:ci": "ng test --single-run",
     "lint": "ng lint",
-    "release:package": "ng-packagr -p ng-package.json",
     "release:prepare": "standard-version",
+    "release:package": "ng-packagr -p ng-package.json",
     "release:publish": "git push --follow-tags origin master; npm publish dist",
     "e2e": "ng e2e"
   },
