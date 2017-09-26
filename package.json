@@ -1,6 +1,6 @@
 {
   "name": "random-angular-library-test",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -10,7 +10,7 @@
     "test": "ng test",
     "test:ci": "ng test --single-run",
     "lint": "ng lint",
-    "release": "npm run packagr && standard-version",
+    "release": "standard-version",
     "e2e": "ng e2e"
   },
   "private": false,
