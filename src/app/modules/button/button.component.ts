@@ -58,8 +58,7 @@ export class ButtonComponent implements OnInit {
   private styleElementByImportanceLevel() {
     if ('primary' === this.rbxImportance) {
       this.styleAsPrimaryButton = true;
-    }
-    else {
+    } else {
       this.styleAsSecondaryButton = true;
     }
   }
