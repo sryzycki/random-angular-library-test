@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/sryzycki/random-angular-library-test/compare/v4.0.2...v4.1.0) (2017-09-26)
+
+
+### Features
+
+* let’s figure out what’s wrong ([bfecce8](https://github.com/sryzycki/random-angular-library-test/commit/bfecce8))
+
+
+
 <a name="4.0.2"></a>
 ## [4.0.2](https://github.com/sryzycki/random-angular-library-test/compare/v4.0.1...v4.0.2) (2017-09-26)
 
