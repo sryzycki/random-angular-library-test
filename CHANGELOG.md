@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v4.5.0...v5.0.0) (2017-09-26)
+
+
+### Features
+
+* **app:** improve npm scripts ([45d5254](https://github.com/sryzycki/random-angular-library-test/commit/45d5254))
+
+
+### BREAKING CHANGES
+
+* **app:** the “packagr” and “release” scripts have been renamed.
+
+
+
 <a name="4.5.0"></a>
 # [4.5.0](https://github.com/sryzycki/random-angular-library-test/compare/v4.1.1...v4.5.0) (2017-09-26)
 
