@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.3.0"></a>
+# [5.3.0](https://github.com/sryzycki/random-angular-library-test/compare/v5.2.0...v5.3.0) (2017-09-27)
+
+
+### Features
+
+* **build:** bundle all the theming scss code into dist/_theming.scss ([f738098](https://github.com/sryzycki/random-angular-library-test/commit/f738098))
+
+
+
 <a name="5.2.0"></a>
 # [5.2.0](https://github.com/sryzycki/random-angular-library-test/compare/v5.1.0...v5.2.0) (2017-09-26)
 
