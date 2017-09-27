@@ -11,10 +11,9 @@
     "lint": "ng lint",
     "release:prepare": "standard-version",
     "release:package": "ng-packagr -p ng-package.json",
-    "theming:bundle:cli": "scss-bundle -e ./src/styles/theming/_all-theme.scss -d ./dist/_theming.scss",
-    "theming:bundle:gulp": "gulp bundleThemeScss",
+    "theming:bundle": "gulp theming:bundle",
     "release:publish": "git push --follow-tags origin master; npm publish dist",
-    "release": "npm run release:prepare && npm run release:package && npm run theming:bundle:cli && npm run release:publish",
+    "release": "npm run release:prepare && npm run release:package && npm run theming:bundle && npm run release:publish",
     "e2e": "ng e2e"
   },
   "private": false,
