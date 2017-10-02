@@ -16,7 +16,7 @@ export type ButtonImportanceLevel = 'primary' | undefined;
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
   // tslint:disable-next-line:component-selector
-  selector: 'button[rbxButton]',
+  selector: 'button[rbx-button]',
   styleUrls: ['./button.component.scss'],
   template: `
     <ng-content></ng-content>
@@ -44,7 +44,7 @@ export class ButtonComponent implements OnInit {
   /**
    * Button importance level in terms of primary/secondary/etc.
    */
-  @Input()
+  @Input('rbx-importance')
   public rbxImportance: ButtonImportanceLevel;
 
   ngOnInit() {
