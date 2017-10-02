@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="8.0.0"></a>
+# [8.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v7.0.0...v8.0.0) (2017-10-02)
+
+
+### Bug Fixes
+
+* **app:** change page layout - test ([485f2df](https://github.com/sryzycki/random-angular-library-test/commit/485f2df))
+
+
+### BREAKING CHANGES
+
+* **app:** the whole universe collapses.
+
+
+
 <a name="7.0.0"></a>
 # [7.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v6.0.0...v7.0.0) (2017-10-02)
 
