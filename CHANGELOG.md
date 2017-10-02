@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="7.0.0"></a>
+# [7.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v6.0.0...v7.0.0) (2017-10-02)
+
+
+### Features
+
+* **button:** make inputs emulate html attributes ([c5b064e](https://github.com/sryzycki/random-angular-library-test/commit/c5b064e))
+
+
+### BREAKING CHANGES
+
+* **button:** input syntax changed.
+
+Before:
+```html
+<button rbxButton rbxImportance=“primary”>Button</button>
+```
+After:
+```html
+<button rbx-button rbx-importance=“primary”>Button</button>
+```
+This is to align usage of our custom elements with native HTML elements. All attributes are name spaced.
+
+
+
 <a name="6.0.0"></a>
 # [6.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v5.3.0...v6.0.0) (2017-09-27)
 
