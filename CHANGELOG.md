@@ -2,6 +2,63 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="9.0.0"></a>
+# [9.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v8.0.0...v9.0.0) (2017-10-03)
+
+
+### Features
+
+* **styles:** make it easier to override colour palettes ([0eb7406](https://github.com/sryzycki/random-angular-library-test/commit/0eb7406))
+
+
+### BREAKING CHANGES
+
+* **styles:** change names of the variables that are used to construct the themes container object.
+
+Before:
+```scss
+// Background palette for light themes.
+$rbx-light-theme-background: (
+  background:           map_get($rbx-grey, 300),
+  button:               map_get($rbx-indigo, 500),
+  button-hover:         black,
+  content:              white,
+);
+
+// Foreground palette for light themes.
+$rbx-light-theme-foreground: (
+  base:                 map_get($rbx-grey, 900),
+  button:               white,
+  text-display:         map_get($rbx-indigo, 500),
+  text-body:            map_get($rbx-grey, 900),
+  text-caption:         map_get($rbx-orange, 500),
+);
+```
+
+After:
+```scss
+// Background palette for light themes.
+$rbx-light-theme-background: (
+  background:           map_get($rbx-grey-palette, 300),
+  button:               map_get($rbx-primary-palette, 500),
+  button-hover:         black,
+  content:              white,
+);
+
+// Foreground palette for light themes.
+$rbx-light-theme-foreground: (
+  base:                 map_get($rbx-grey-palette, 900),
+  button:               white,
+  text-display:         map_get($rbx-primary-palette, 500),
+  text-body:            map_get($rbx-grey-palette, 900),
+  text-caption:         map_get($rbx-accent-palette, 500),
+);
+```
+
+From now on if you override the `$rbx-primary-palette` and the `$rbx-accent-palette` variables you can decide not to build the `$rbx-light-theme-background` and `$rbx-light-theme-foreground` colour Sass maps if you don’t need to.
+
+
+
 <a name="8.0.0"></a>
 # [8.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v7.0.0...v8.0.0) (2017-10-02)
 
