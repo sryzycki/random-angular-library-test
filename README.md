@@ -4,9 +4,33 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
 
+## Requirements to deliver
+
+**Linting**
+- [x] TypeScript
+- [x] official Angular style guide
+- [ ] Sass
+
+**Theme & typography**
+- [x] theme
+- [x] typography
+- [x] POF of consuming pattern library with a default theme
+- [x] POF of consuming pattern library with a custom theme
+
+**Documentation**
+- [x] automated change log
+- [ ] automatically generated docs for Angular components/services/...
+- [ ] demo app showing working components inside of the pattern library
+- [ ] deliver two components following (100%) the pattern library spec and cover them with unit tests so that the team can have a look around
+
+**Continuous Integration/Deployment**
+- [x] each build runs all the lint and unit test NPM scripts
+- [ ] reject the PR merge if CI checks failed
+- [ ] set up test coverage threshold (e.g. 90% threshold level) so that CI checks fail if it falls below
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:7890/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
