@@ -6,13 +6,30 @@
 // While the contrast colors in the spec are not prescriptive, we use them for convenience.
 
 
-$black-87-opacity: rgba(black, 0.87);
-$white-87-opacity: rgba(white, 0.87);
-$black-12-opacity: rgba(black, 0.12);
-$white-12-opacity: rgba(white, 0.12);
-$black-6-opacity: rgba(black, 0.06);
-$white-6-opacity: rgba(white, 0.06);
+$rbx-primary-palette: (
+  100: #788a9b,
+  500: #002548,
+  700: #001d38,
+  contrast: (
+    100: black,
+    500: white,
+    700: white,
+  )
+);
 
+$rbx-accent-palette: (
+  100: #ffe0b2,
+  500: #ff9800,
+  700: #f57c00,
+  contrast: (
+    100: black,
+    500: black,
+    700: black,
+  )
+);
+
+// Define a red palette for the "warn" palette,
+// see the "rbx-light-theme" Sass function.
 $rbx-red: (
   50: #ffebee,
   100: #ffcdd2,
@@ -29,46 +46,27 @@ $rbx-red: (
   A400: #ff1744,
   A700: #d50000,
   contrast: (
-    50: $black-87-opacity,
-    100: $black-87-opacity,
-    200: $black-87-opacity,
-    300: $black-87-opacity,
-    400: $black-87-opacity,
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: black,
     500: white,
     600: white,
     700: white,
-    800: $white-87-opacity,
-    900: $white-87-opacity,
-    A100: $black-87-opacity,
+    800: white,
+    900: white,
+    A100: black,
     A200: white,
     A400: white,
     A700: white,
   )
 );
 
-$rbx-indigo: (
-  100: #788a9b,
-  500: #002548,
-  700: #001d38,
-  contrast: (
-    100: $black-87-opacity,
-    500: $white-87-opacity,
-    700: $white-87-opacity,
-  )
-);
 
-$rbx-orange: (
-  100: #ffe0b2,
-  500: #ff9800,
-  700: #f57c00,
-  contrast: (
-    100: $black-87-opacity,
-    500: $black-87-opacity,
-    700: $black-87-opacity,
-  )
-);
-
-$rbx-grey: (
+// Define a grey palette for general use,
+// e.g. a content container component background.
+$rbx-grey-palette: (
   50: #fafafa,
   100: #f5f5f5,
   200: #eeeeee,
@@ -84,44 +82,44 @@ $rbx-grey: (
   A400: #bdbdbd,
   A700: #616161,
   contrast: (
-    50: $black-87-opacity,
-    100: $black-87-opacity,
-    200: $black-87-opacity,
-    300: $black-87-opacity,
-    400: $black-87-opacity,
-    500: $black-87-opacity,
-    600: $white-87-opacity,
-    700: $white-87-opacity,
-    800: $white-87-opacity,
-    900: $white-87-opacity,
-    A100: $black-87-opacity,
-    A200: $black-87-opacity,
-    A400: $black-87-opacity,
-    A700: $white-87-opacity,
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: black,
+    500: black,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: black,
+    A200: black,
+    A400: black,
+    A700: white,
   )
 );
 
 // Background palette for light themes.
 $rbx-light-theme-background: (
-  background:           map_get($rbx-grey, 300),
-  button:               map_get($rbx-indigo, 500),
+  background:           map_get($rbx-grey-palette, 300),
+  button:               map_get($rbx-primary-palette, 500),
   button-hover:         black,
   content:              white,
 );
 
 // Foreground palette for light themes.
 $rbx-light-theme-foreground: (
-  base:                 map_get($rbx-grey, 900),
+  base:                 map_get($rbx-grey-palette, 900),
   button:               white,
-  text-display:         map_get($rbx-indigo, 500),
-  text-body:            map_get($rbx-grey, 900),
-  text-caption:         map_get($rbx-orange, 500),
+  text-display:         map_get($rbx-primary-palette, 500),
+  text-body:            map_get($rbx-grey-palette, 900),
+  text-caption:         map_get($rbx-accent-palette, 500),
 );
 
 // Background palette for dark themes.
 $rbx-dark-theme-background: (
-  background:           map_get($rbx-grey, 700),
-  button:               map_get($rbx-indigo, 500),
+  background:           map_get($rbx-grey-palette, 700),
+  button:               map_get($rbx-primary-palette, 500),
   button-hover:         black,
   content:              black,
 );

@@ -17,6 +17,12 @@
     &[disabled] {
       opacity: 0.5;
     }
+
+    // TODO(Samuel): Remove this after all the demos to the team.
+    &.demo-accent {
+      $accent: map_get($theme, accent);
+      background-color: map_get($accent, 500);
+    }
   }
 }
 

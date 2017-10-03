@@ -20,8 +20,8 @@
 // - default-contrast
 // - default-lighter-contrast
 // - default-darker-contrast
-$primary:          rbx-palette($rbx-indigo);
-$accent:           rbx-palette($rbx-orange, A200, A100, A400);
+$primary:          rbx-palette($rbx-primary-palette, 100, 500, 700);
+$accent:           rbx-palette($rbx-accent-palette, A200, A100, A400);
 $demo-app-theme:   rbx-light-theme($primary, $accent);
 
 // Include the default theme styles.
