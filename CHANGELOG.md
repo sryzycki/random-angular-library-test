@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="10.0.0"></a>
+# [10.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v9.0.0...v10.0.0) (2017-10-03)
+
+
+### Features
+
+* **button:** add ability to blow up the world ([8d23e1e](https://github.com/sryzycki/random-angular-library-test/commit/8d23e1e))
+
+
+### BREAKING CHANGES
+
+* **button:** xyz input has been removed.
+
+Before:
+```html
+<button></button>
+```
+After:
+```html
+<button new-button=“blabla”></button>
+```
+
+
+
 <a name="9.0.0"></a>
 # [9.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v8.0.0...v9.0.0) (2017-10-03)
 
