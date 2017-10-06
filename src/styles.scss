@@ -20,12 +20,12 @@
 // - default-contrast
 // - default-lighter-contrast
 // - default-darker-contrast
-$primary:          rbx-palette($rbx-primary-palette, 100, 500, 700);
-$accent:           rbx-palette($rbx-accent-palette, A200, A100, A400);
-$demo-app-theme:   rbx-light-theme($primary, $accent);
+$primary:               rbx-palette($rbx-primary-palette, 500, 100, 700);
+$accent:                rbx-palette($rbx-accent-palette, 500, 100, 700);
+$rbx-demo-app-theme:    rbx-light-theme($primary, $accent);
 
 // Include the default theme styles.
-@include rubix-theme($demo-app-theme);
+@include rubix-theme($rbx-demo-app-theme);
 
 
 // TODO(Samuel): Figure out if we need a dark theme (e.g. Rubix button?)
