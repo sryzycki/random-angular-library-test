@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="11.0.1"></a>
+## [11.0.1](https://github.com/sryzycki/random-angular-library-test/compare/v11.0.0...v11.0.1) (2017-10-06)
+
+
+### Bug Fixes
+
+* **card:** expose the module in the distributed package ([7750ae9](https://github.com/sryzycki/random-angular-library-test/commit/7750ae9))
+
+
+
 <a name="11.0.0"></a>
 # [11.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v10.0.1...v11.0.0) (2017-10-06)
 
