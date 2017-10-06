@@ -49,10 +49,10 @@ describe('ButtonComponent', () => {
   });
 
   it('has the "primary" CSS class when "rbxImportance" input is set to "primary"', () => {
-    expect(primaryButtonElem.classList).toContain('primary');
+    expect(primaryButtonElem.classList).toContain('rbx-button--primary');
   });
 
   it('has the "secondary" CSS class when "rbxImportance" input is not provided', () => {
-    expect(secondaryButtonElem.classList).toContain('secondary');
+    expect(secondaryButtonElem.classList).toContain('rbx-button--secondary');
   });
 });

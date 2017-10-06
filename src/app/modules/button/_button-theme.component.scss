@@ -3,35 +3,46 @@
 
 
 @mixin rbx-button-theme($theme) {
-  $background: map-get($theme, background);
-  $foreground: map-get($theme, foreground);
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
 
   .rbx-button {
-    background-color: map_get($background, button);
-    color: map_get($foreground, button);
-
-    &:hover:not([disabled]) {
-      background-color: map_get($background, button-hover);
-    }
-
     &[disabled] {
       opacity: 0.5;
+    }
+  }
+
+  .rbx-button--primary {
+    background-color: rbx-color($accent, default);
+    color: rbx-color($accent, default-contrast);
+
+    &:hover:not([disabled]) {
+      background-color: rbx-color($accent, darker);
+      color: rbx-color($accent, darker-contrast);
+    }
+  }
+
+  .rbx-button--secondary {
+    background-color: rbx-color($primary, default);
+    color: rbx-color($primary, default-contrast);
+
+    &:hover:not([disabled]) {
+      background-color: rbx-color($primary, darker);
+      color: rbx-color($primary, darker-contrast);
     }
   }
 }
 
 @mixin rbx-button-typography($config) {
-  .rbx-button {
-    &.primary {
-      font-family: rbx-font-family($config, button-2);
-      font-size: rbx-font-size($config, button-2);
-      font-weight: rbx-font-weight($config, button-2);
-    }
+  .rbx-button--primary {
+    font-family: rbx-font-family($config, button-2);
+    font-size: rbx-font-size($config, button-2);
+    font-weight: rbx-font-weight($config, button-2);
+  }
 
-    &.secondary {
-      font-family: rbx-font-family($config, button-1);
-      font-size: rbx-font-size($config, button-1);
-      font-weight: rbx-font-weight($config, button-1);
-    }
+  .rbx-button--secondary {
+    font-family: rbx-font-family($config, button-1);
+    font-size: rbx-font-size($config, button-1);
+    font-weight: rbx-font-weight($config, button-1);
   }
 }

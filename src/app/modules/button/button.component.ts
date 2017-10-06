@@ -32,13 +32,13 @@ export class ButtonComponent implements OnInit {
   /**
    * Bind to the host "secondary" CSS class.
    */
-  @HostBinding('class.secondary')
+  @HostBinding('class.rbx-button--secondary')
   public styleAsSecondaryButton: boolean;
 
   /**
    * Bind to the host "primary" CSS class.
    */
-  @HostBinding('class.primary')
+  @HostBinding('class.rbx-button--primary')
   public styleAsPrimaryButton: boolean;
 
   /**

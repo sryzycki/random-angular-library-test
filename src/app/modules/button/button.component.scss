@@ -7,14 +7,14 @@
   &:not([disabled]) {
     cursor: pointer;
   }
+}
 
-  &.primary {
-    padding-top: .95em;
-    padding-bottom: .95em;
-  }
+.rbx-button--primary {
+  padding-top: .95em;
+  padding-bottom: .95em;
+}
 
-  &.secondary {
-    padding-top: .6em;
-    padding-bottom: .6em;
-  }
+.rbx-button--secondary {
+  padding-top: .6em;
+  padding-bottom: .6em;
 }
