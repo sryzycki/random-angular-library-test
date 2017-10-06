@@ -1,0 +1,14 @@
+@import '../../../styles/theming/theming';
+@import '../../../styles/typography/typography-utils';
+
+
+@mixin rbx-hero-section-theme($theme) {
+  $primary: map-get($theme, primary);
+
+  .rbx-hero-section {
+    background-color: rbx-color($primary);
+    color: rbx-color($primary, default-contrast);
+  }
+}
+
+@mixin rbx-hero-section-typography($config) { }
