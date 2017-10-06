@@ -101,24 +101,27 @@ $rbx-grey-palette: (
 
 // Background palette for light themes.
 $rbx-light-theme-background: (
-  background:           map_get($rbx-grey-palette, 300),
-  button:               map_get($rbx-primary-palette, 500),
-  button-hover:         black,
+  // App <body> element background colour.
+  app:                  map_get($rbx-grey-palette, 300),
+  // Content containers background colour.
   content:              white,
 );
 
 // Foreground palette for light themes.
 $rbx-light-theme-foreground: (
+  // Default "go to" typography colour. To be revised if needed.
   base:                 map_get($rbx-grey-palette, 900),
-  button:               white,
+  // Big bad ass headlines colour.
   text-display:         map_get($rbx-primary-palette, 500),
+  // Body text colour.
   text-body:            map_get($rbx-grey-palette, 900),
+  // Caption colour.
   text-caption:         map_get($rbx-accent-palette, 500),
 );
 
 // Background palette for dark themes.
 $rbx-dark-theme-background: (
-  background:           map_get($rbx-grey-palette, 700),
+  app:                  map_get($rbx-grey-palette, 700),
   button:               map_get($rbx-primary-palette, 500),
   button-hover:         black,
   content:              black,
