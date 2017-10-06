@@ -41,3 +41,11 @@ $rbx-demo-app-theme:    rbx-light-theme($primary, $accent);
 //.rubix-dark-theme {
 //  @include rubix-theme($dark-theme);
 //}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+body {
+  $background: map_get($rbx-demo-app-theme, background);
+  background-color: map_get($background, app);
+}
