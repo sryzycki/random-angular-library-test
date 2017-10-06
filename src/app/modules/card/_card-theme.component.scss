@@ -1,0 +1,15 @@
+@import '../../../styles/theming/theming';
+@import '../../../styles/typography/typography-utils';
+
+
+@mixin rbx-card-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .rbx-card {
+    background-color: map_get($background, content);
+    color: map_get($foreground, base);
+  }
+}
+
+@mixin rbx-card-typography($config) { }

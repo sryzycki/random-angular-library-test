@@ -1,4 +1,5 @@
 @import './typography';
+@import '../../app/modules/card/card-theme.component';
 @import '../../app/modules/button/button-theme.component';
 
 
@@ -9,5 +10,6 @@
   }
 
   @include rbx-base-typography($config);
+  @include rbx-card-typography($config);
   @include rbx-button-typography($config);
 }

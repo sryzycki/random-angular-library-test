@@ -1,10 +1,12 @@
 // Import all the theming functionality.
 @import '../core';
+@import '../../app/modules/card/card-theme.component';
 @import '../../app/modules/button/button-theme.component';
 
 
 // Create a theme.
 @mixin rubix-theme($theme) {
   @include rbx-core-theme($theme);
+  @include rbx-card-theme($theme);
   @include rbx-button-theme($theme);
 }
