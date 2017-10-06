@@ -36,6 +36,33 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `npm start` for a dev server. Navigate to `http://localhost:7890/`. The app will automatically reload if you change any of the source files.
 
+## How to theme a component
+
+Each component should two stylesheet files: one for non theme related styles and one for theme related only CSS rules.
+The theme related stylesheet exposes two mixins: theme and typography that are later collected and included in a top level Sass partial.
+
+**$theme argument - structure**
+Theme mixin always gets one `$theme` variable which is an object that is build by either a "light" or "dark" theme function:
+```sass
+// Creates a container object for a light theme to be given to
+// every individual component theme mixins.
+@function rbx-light-theme($primary, $accent, $warn: rbx-palette($rbx-red)) {
+  @return (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+    is-dark: false,
+    foreground: $rbx-light-theme-foreground,
+    background: $rbx-light-theme-background,
+  );
+}
+```
+
+**$typography-config argument - structure**
+```sass
+
+```
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
