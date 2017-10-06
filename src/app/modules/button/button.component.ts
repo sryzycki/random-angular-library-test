@@ -24,10 +24,10 @@ export type ButtonImportanceLevel = 'primary' | undefined;
 })
 export class ButtonComponent implements OnInit {
   /**
-   * Always apply the base Rubix button css class.
+   * Always apply the base css class to ease theming.
    */
   @HostBinding('class.rbx-button')
-  private addBaseButtonCssClass = true;
+  private addBaseCssClass = true;
 
   /**
    * Bind to the host "secondary" CSS class.

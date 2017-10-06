@@ -28,6 +28,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [ ] reject the PR merge if CI checks failed
 - [ ] set up test coverage threshold (e.g. 90% threshold level) so that CI checks fail if it falls below
 
+**Code scaffolding**
+- [ ] set CLI config with default “viewEncapsulation” setting to "None"
+- [ ] set CLI config with default “export” setting (AFAIR to do with whether or not to export the component?)
+
 ## Development server
 
 Run `npm start` for a dev server. Navigate to `http://localhost:7890/`. The app will automatically reload if you change any of the source files.

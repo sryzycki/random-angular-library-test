@@ -11,8 +11,8 @@ import { ChangeDetectionStrategy, Component, HostBinding, ViewEncapsulation } fr
 })
 export class CardComponent {
   /**
-   * Always apply the base Rubix button css class.
+   * Always apply the base css class to ease theming.
    */
   @HostBinding('class.rbx-card')
-  private addBaseButtonCssClass = true;
+  private addBaseCssClass = true;
 }

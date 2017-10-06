@@ -54,6 +54,7 @@
     "styleExt": "scss",
     "component": {
       "inlineTemplate": true,
+      "viewEncapsulation": "None",
       "changeDetection": "OnPush"
     }
   }
