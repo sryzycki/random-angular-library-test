@@ -2,6 +2,69 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="11.0.0"></a>
+# [11.0.0](https://github.com/sryzycki/random-angular-library-test/compare/v10.0.1...v11.0.0) (2017-10-06)
+
+
+### Code Refactoring
+
+* **styles:** tidy up theme foreground/background objects ([58b016d](https://github.com/sryzycki/random-angular-library-test/commit/58b016d))
+
+
+### Features
+
+* **app:** wrap RbxButtonModule showcase with rbx-card element ([503d386](https://github.com/sryzycki/random-angular-library-test/commit/503d386))
+* **card:** add the most simple card varation ([4c2f2f6](https://github.com/sryzycki/random-angular-library-test/commit/4c2f2f6))
+
+
+### BREAKING CHANGES
+
+* **styles:** the foreground/background theme object has properties changed/removed.
+
+Before:
+```sass
+// Background palette for light themes.
+$rbx-light-theme-background: (
+  background:           map_get($rbx-grey-palette, 300),
+  button:               map_get($rbx-primary-palette, 500),
+  button-hover:         black,
+  content:              white,
+);
+
+// Foreground palette for light themes.
+$rbx-light-theme-foreground: (
+  base:                 map_get($rbx-grey-palette, 900),
+  button:               white,
+  text-display:         map_get($rbx-primary-palette, 500),
+  text-body:            map_get($rbx-grey-palette, 900),
+  text-caption:         map_get($rbx-accent-palette, 500),
+);
+```
+After:
+```sass
+// Background palette for light themes.
+$rbx-light-theme-background: (
+  // App <body> element background colour.
+  app:                  map_get($rbx-grey-palette, 300),
+  // Content containers background colour.
+  content:              white,
+);
+
+// Foreground palette for light themes.
+$rbx-light-theme-foreground: (
+  // Default "go to" typography colour. To be revised if needed.
+  base:                 map_get($rbx-grey-palette, 900),
+  // Big bad ass headlines colour.
+  text-display:         map_get($rbx-primary-palette, 500),
+  // Body text colour.
+  text-body:            map_get($rbx-grey-palette, 900),
+  // Caption colour.
+  text-caption:         map_get($rbx-accent-palette, 500),
+);
+```
+
+
+
 <a name="10.0.1"></a>
 ## [10.0.1](https://github.com/sryzycki/random-angular-library-test/compare/v10.0.0...v10.0.1) (2017-10-03)
 
