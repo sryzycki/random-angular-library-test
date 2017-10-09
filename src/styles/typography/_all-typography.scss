@@ -1,3 +1,4 @@
+// Import all the typography functionality (Sass functions, mixins, maps).
 @import './typography';
 @import '../../app/modules/hero-section/hero-section-theme.component';
 @import '../../app/modules/card/card-theme.component';
@@ -5,13 +6,13 @@
 
 
 // Includes all of the typographic styles.
-@mixin rubix-typography($config: null) {
-  @if $config == null {
-    $config: rbx-typography-config();
+@mixin rubix-typography($typography: null) {
+  @if $typography == null {
+    $typography: rbx-typography-config();
   }
 
-  @include rbx-base-typography($config);
-  @include rbx-hero-section-typography($config);
-  @include rbx-card-typography($config);
-  @include rbx-button-typography($config);
+  @include rbx-base-typography($typography);
+  @include rbx-hero-section-typography($typography);
+  @include rbx-card-typography($typography);
+  @include rbx-button-typography($typography);
 }

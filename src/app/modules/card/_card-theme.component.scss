@@ -12,4 +12,10 @@
   }
 }
 
-@mixin rbx-card-typography($config) { }
+@mixin rbx-card-typography($typography) {
+  .rbx-card {
+    font-family: rbx-font-family($typography, body-2);
+    font-size: rbx-font-size($typography, body-2);
+    font-weight: rbx-font-weight($typography, body-2);
+  }
+}

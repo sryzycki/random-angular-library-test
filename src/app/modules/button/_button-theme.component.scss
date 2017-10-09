@@ -33,16 +33,16 @@
   }
 }
 
-@mixin rbx-button-typography($config) {
+@mixin rbx-button-typography($typography) {
   .rbx-button--primary {
-    font-family: rbx-font-family($config, button-2);
-    font-size: rbx-font-size($config, button-2);
-    font-weight: rbx-font-weight($config, button-2);
+    font-family: rbx-font-family($typography, button-2);
+    font-size: rbx-font-size($typography, button-2);
+    font-weight: rbx-font-weight($typography, button-2);
   }
 
   .rbx-button--secondary {
-    font-family: rbx-font-family($config, button-1);
-    font-size: rbx-font-size($config, button-1);
-    font-weight: rbx-font-weight($config, button-1);
+    font-family: rbx-font-family($typography, button-1);
+    font-size: rbx-font-size($typography, button-1);
+    font-weight: rbx-font-weight($typography, button-1);
   }
 }
