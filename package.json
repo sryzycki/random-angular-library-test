@@ -1,6 +1,6 @@
 {
   "name": "random-angular-library-test",
-  "version": "11.1.1",
+  "version": "11.1.2",
   "license": "MIT",
   "scripts": {
     "ng": "ng",

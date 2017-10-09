@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="11.1.2"></a>
+## [11.1.2](https://github.com/sryzycki/random-angular-library-test/compare/v11.1.1...v11.1.2) (2017-10-09)
+
+
+### Bug Fixes
+
+* **styles:** align body typography levels with the Rubix spec ([ce27263](https://github.com/sryzycki/random-angular-library-test/commit/ce27263))
+
+
+
 <a name="11.1.1"></a>
 ## [11.1.1](https://github.com/sryzycki/random-angular-library-test/compare/v11.1.0...v11.1.1) (2017-10-06)
 
