@@ -122,15 +122,12 @@ $rbx-light-theme-foreground: (
 // Background palette for dark themes.
 $rbx-dark-theme-background: (
   app:                  map_get($rbx-grey-palette, 700),
-  button:               map_get($rbx-primary-palette, 500),
-  button-hover:         black,
   content:              black,
 );
 
 // Foreground palette for dark themes.
 $rbx-dark-theme-foreground: (
   base:                 white,
-  button:               white,
   text-display:         white,
   text-body:            white,
   text-caption:         white,
