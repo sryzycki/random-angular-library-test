@@ -4,6 +4,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
 
+## Development server
+
+Run `npm start` and navigate to `http://localhost:7890/` to view the demo app showcasing all Rubix components. The app will automatically reload if you change any of the source files.
+
 ## Requirements to deliver
 
 **Linting**
@@ -33,10 +37,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 **Code scaffolding**
 - [ ] set CLI config with default “viewEncapsulation” setting to "None"
 - [ ] set CLI config with default “export” setting (AFAIR to do with whether or not to export the component?)
-
-## Development server
-
-Run `npm start` for a dev server. Navigate to `http://localhost:7890/`. The app will automatically reload if you change any of the source files.
 
 ## How to theme a component
 
@@ -233,6 +233,120 @@ The below `$config` variable holds the Sass map that later on gets passed as the
     font-family: $font-family
   );
 }
+```
+
+### How to override the Rubix default theme
+So you have an app that depends on the Rubix pattern library. To apply your own theme to all the Rubix component all you need to do is to include this mixin:
+```sass
+@include rubix-theme($ten-app-theme);
+```
+To get `$ten-app-theme` variable that contains the Rubix theme container, you need to use the `rbx-light-theme()` Sass function that requires a couple of colour palettes returned by the `rbx-palette()` Sass function.
+
+The `$rbx-light-theme-background` and `$rbx-light-theme-foreground` variables are put there in the global scope to be accessed when the `rbx-light-theme()` Sass function is invoked.
+
+### Complete example of overriding Rubix theme
+```sass
+@import '~random-angular-library-test/theming';
+
+// Include the common styles for Rubix. We include this here so that you only
+// have to load a single css file for Rubix in your app.
+// **Be sure that you only ever include this mixin once!**
+@include rbx-core();
+
+$rbx-primary-palette: (
+  100: #ff808d,
+  500: #eb041c,
+  700: #cc0419,
+  contrast: (
+    100: black,
+    500: white,
+    700: white,
+  )
+);
+
+$rbx-accent-palette: (
+  100: #ffca7b,
+  500: #f79e1b,
+  700: #d67f00,
+  contrast: (
+    100: black,
+    500: black,
+    700: white,
+  )
+);
+
+// Define a grey palette for general use,
+// e.g. a content container component background.
+$rbx-grey-palette: (
+  50: #fafafa,
+  100: #f5f5f5,
+  200: #eeeeee,
+  300: #e0e0e0,
+  400: #bdbdbd,
+  500: #9e9e9e,
+  600: #757575,
+  700: #616161,
+  800: #424242,
+  900: #3b3b3b,
+  A100: #ffffff,
+  A200: #eeeeee,
+  A400: #bdbdbd,
+  A700: #616161,
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: black,
+    500: black,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: black,
+    A200: black,
+    A400: black,
+    A700: white,
+  )
+);
+
+// Background palette for light themes.
+$rbx-light-theme-background: (
+  // App <body> element background colour.
+  app:                  map_get($rbx-grey-palette, 300),
+  // Content containers background colour.
+  content:              white,
+);
+
+// Foreground palette for light themes.
+$rbx-light-theme-foreground: (
+  // Default "go to" typography colour. To be revised if needed.
+  base:                 map_get($rbx-grey-palette, 900),
+  // Big bad ass headlines colour.
+  text-display:         map_get($rbx-primary-palette, 500),
+  // Body text colour.
+  text-body:            map_get($rbx-grey-palette, 900),
+  // Caption colour.
+  text-caption:         map_get($rbx-accent-palette, 500),
+);
+
+// Define the app theme.
+//
+// The "rbx-palette" Sass function takes the extended
+// base color palette it was given and returns it
+// with a few extra properties like:
+// - default
+// - default-lighter
+// - default-darker
+// - default-contrast
+// - default-lighter-contrast
+// - default-darker-contrast
+$ten-primary:               rbx-palette($rbx-primary-palette, 500, 100, 700);
+$ten-accent:                rbx-palette($rbx-accent-palette, 500, 100, 700);
+$ten-app-theme:             rbx-light-theme($ten-primary, $ten-accent);
+
+// Include the theme styles.
+@include rubix-theme($ten-app-theme);
 ```
 
 ## Code scaffolding
