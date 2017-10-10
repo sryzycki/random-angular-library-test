@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="11.1.3"></a>
+## [11.1.3](https://github.com/sryzycki/random-angular-library-test/compare/v11.1.2...v11.1.3) (2017-10-10)
+
+
+
 <a name="11.1.2"></a>
 ## [11.1.2](https://github.com/sryzycki/random-angular-library-test/compare/v11.1.1...v11.1.2) (2017-10-09)
 
