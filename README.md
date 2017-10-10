@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `npm start` and navigate to `http://localhost:7890/` to view the demo app showcasing all Rubix components. The app will automatically reload if you change any of the source files.
+Run `npm start` and navigate to `http://localhost:5000/` to view the demo app showcasing all Rubix components. The app will automatically reload if you change any of the source files.
 
 ## Requirements to deliver
 
