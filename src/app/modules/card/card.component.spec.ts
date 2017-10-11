@@ -1,4 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { getTestBed, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { expect } from 'chai';
 
 import { CardComponent } from './card.component';
 
@@ -6,12 +8,12 @@ describe('CardComponent', () => {
   let component: CardComponent;
   let fixture: ComponentFixture<CardComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ CardComponent ]
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CardComponent);
@@ -19,7 +21,11 @@ describe('CardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  afterEach(() => {
+    getTestBed().resetTestingModule();
+  });
+
+  it('should create component', () => {
+    expect(component).to.not.be.undefined;
   });
 });

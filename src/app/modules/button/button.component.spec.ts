@@ -1,8 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { getTestBed, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { Component, DebugElement } from '@angular/core';
 
+import { expect } from 'chai';
+
 import { ButtonComponent } from './button.component';
-import { By } from '@angular/platform-browser';
 
 @Component({
   selector: 'rbx-host',
@@ -19,40 +21,46 @@ describe('ButtonComponent', () => {
   let component: HostComponent;
   let fixture: ComponentFixture<HostComponent>;
   let element: DebugElement;
-  let primaryButtonElem: HTMLButtonElement;
-  let secondaryButtonElem: HTMLButtonElement;
+  let el_primary: HTMLButtonElement;
+  let el_secondary: HTMLButtonElement;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ HostComponent, ButtonComponent ]
     })
     .compileComponents();
-  }));
+  });
 
-  beforeEach(() => {
+  beforeEach(async () => {
     fixture = TestBed.createComponent(HostComponent);
     component = fixture.componentInstance;
     element = fixture.debugElement;
-    primaryButtonElem = element.query(By.css('.js-primary')).nativeElement;
-    secondaryButtonElem = element.query(By.css('.js-secondary')).nativeElement;
 
     fixture.detectChanges();
+    await fixture.whenStable();
+
+    el_primary = fixture.debugElement.query(By.css('.js-primary')).nativeElement;
+    el_secondary = fixture.debugElement.query(By.css('.js-secondary')).nativeElement;
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  afterEach(() => {
+    getTestBed().resetTestingModule();
+  });
+
+  it('should create component', () => {
+    expect(component).to.not.be.undefined;
   });
 
   it('always has the "rbx-button" CSS class', () => {
-    expect(primaryButtonElem.classList).toContain('rbx-button');
-    expect(secondaryButtonElem.classList).toContain('rbx-button');
+    expect(el_primary.classList.contains('rbx-button')).to.be.true;
+    expect(el_secondary.classList.contains('rbx-button')).to.be.true;
   });
 
   it('has the "primary" CSS class when "rbxImportance" input is set to "primary"', () => {
-    expect(primaryButtonElem.classList).toContain('rbx-button--primary');
+    expect(el_primary.classList.contains('rbx-button--primary')).to.be.true;
   });
 
   it('has the "secondary" CSS class when "rbxImportance" input is not provided', () => {
-    expect(secondaryButtonElem.classList).toContain('rbx-button--secondary');
+    expect(el_secondary.classList.contains('rbx-button--secondary')).to.be.true;
   });
 });
