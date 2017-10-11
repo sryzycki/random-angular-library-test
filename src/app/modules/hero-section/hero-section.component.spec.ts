@@ -1,4 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { getTestBed, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { expect } from 'chai';
 
 import { HeroSectionComponent } from './hero-section.component';
 
@@ -6,12 +8,12 @@ describe('HeroSectionComponent', () => {
   let component: HeroSectionComponent;
   let fixture: ComponentFixture<HeroSectionComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ HeroSectionComponent ]
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HeroSectionComponent);
@@ -19,7 +21,11 @@ describe('HeroSectionComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  afterEach(() => {
+    getTestBed().resetTestingModule();
+  });
+
+  it('should create component', () => {
+    expect(component).to.not.be.undefined;
   });
 });
